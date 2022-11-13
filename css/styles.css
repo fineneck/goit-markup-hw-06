@@ -341,7 +341,6 @@ img {
 
   transition: var(--animation);
 }
-.field-pos input:hover + .icon-modal,
 .field-pos input:focus + .icon-modal {
   fill: var(--accent-text-color);
 }
