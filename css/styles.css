@@ -257,8 +257,7 @@ img {
   transform: translate(-50%, -50%) scale(1);
 
   width: 528px;
-  height: 581px;
-  padding: 40px;
+  padding: 40px 39px 40px 41px;
 
   background-color: var(--white-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -304,8 +303,11 @@ img {
   flex-direction: column;
   text-align: left;
 }
-.form-field {
+.form-field:not(:last-child) {
   margin-bottom: 10px;
+}
+.form-comment {
+  margin-bottom: 20px;
 }
 .form-field label,
 .form-comment label {
@@ -316,7 +318,7 @@ img {
   color: var(--primary-text-color);
 }
 .form-field input {
-  padding: 12px 0 12px 42px;
+  padding: 12px 42px 12px 42px;
 
   width: 100%;
 
@@ -364,22 +366,42 @@ img {
 .form-comment textarea:focus {
   border: 1px solid var(--accent-text-color);
 }
-.form-check {
-  display: flex;
-  justify-content: center;
-  gap: 8.38px;
 
-  margin-top: 20px;
+.form-check  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-bottom: 30px;
-}
-.form-check label {
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
 }
+.form-check input {
+  appearance: none;
+}
 .form-check a {
   color: var(--accent-text-color);
+}
+.check {
+  width: 16px;
+  height: 15px;
+
+  margin-right: 8px;
+  
+  background-color: ;
+  border: 1px solid var(--black-color); 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
+}
+.form-check input:checked + .check {
+  background-color: var(--accent-text-color);
+  border-color: var(--accent-text-color);
+  border-radius: 2px;
+  background-image: url("../images/icon-check1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 form .button {
   padding: 10px 52px;
