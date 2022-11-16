@@ -413,6 +413,7 @@ img {
   border-radius: 2px;
   background-image: url(../images/icon-check.svg);
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   transition: var(--animation);
 }
