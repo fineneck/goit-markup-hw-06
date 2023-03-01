@@ -428,25 +428,27 @@ form .button:focus {
 }
 
 /*features*/
-.icons {
+
+.features {
+  display: flex;
+}
+.features__item:not(:last-child) {
+  margin-right: 30px;
+}
+.features__icons {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 270px;
   height: 120px;
+
   margin-bottom: 30px;
   border-radius: 4px;
 
   background-color: var(--button-bg-color);
 }
-.features-list {
-  display: flex;
-}
-.features-list .item + .item {
-  margin-left: 30px;
-}
-
-.features-title {
+.features__subtitle {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -454,36 +456,18 @@ form .button:focus {
   line-height: 1.14;
   text-transform: uppercase;
 }
-.features-text {
+.features__text {
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.71;
 }
 
-/*team*/
-.section-team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
-  background-color: var(--button-bg-color);
-}
-.team-color {
-  background-color: var(--white-text-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
+/*work*/
 .section-work {
   padding-bottom: 94px;
   z-index: -1;
 }
-.work-block,
-.team-list {
-  display: flex;
-  gap: 30px;
-}
-.work-title,
-.team-title {
+.title {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -491,10 +475,14 @@ form .button:focus {
   line-height: 1.16;
   text-align: center;
 }
-.work-thumb {
+.work-block {
+  display: flex;
+  gap: 30px;
+}
+.work-block__thumb {
   position: relative;
 }
-.work-block .element {
+.work-block__element {
   position: absolute;
   bottom: 0px;
 
@@ -507,17 +495,40 @@ form .button:focus {
 
   background-color: rgba(47, 48, 58, 0.8);
 }
-.work-block .features-title {
+.subtitle {
   margin: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
 
   color: var(--white-text-color);
 }
 
-.dev-box {
+
+/*team*/
+.section-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  background-color: var(--button-bg-color);
+}
+.team {
+  display: flex;
+  gap: 30px;
+}
+.team__item {
+  background-color: var(--white-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team__thumb {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.dev-title {
+.team__title {
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -525,7 +536,7 @@ form .button:focus {
   line-height: 1.19;
   text-align: center;
 }
-.dev-text {
+.team__text {
   margin-bottom: 16px;
 
   color: var(--primary-text-color);
@@ -533,14 +544,12 @@ form .button:focus {
   line-height: 1.19;
   text-align: center;
 }
-
-.dev-contacts {
+.social-list {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-
-.contact-link .link {
+.social-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -552,8 +561,8 @@ form .button:focus {
   border-radius: 50%;
   transition: background-color var(--animation), fill var(--animation);
 }
-.contact-link .link:hover,
-.contact-link .link:focus {
+.social-list__link:hover,
+.social-list__link:focus {
   fill: var(--white-text-color);
   background-color: var(--accent-text-color);
 }
@@ -763,14 +772,14 @@ address {
 
   color: var(--white-text-color);
 }
-.social-list {
+/*.social-list {
   display: flex;
   justify-content: start;
   gap: 10px;
 }
 .social-list .icon-dev {
   fill: var(--white-text-color);
-}
+}*/
 
 .form-foot {
   display: flex;
